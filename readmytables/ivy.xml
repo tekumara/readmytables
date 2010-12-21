@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+
+	<info organisation="org.omancode" module="rmt" revision="1.0" status="release">
+		<license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html" />
+		<description homepage="http://code.google.com/p/casperdatasets/">
+		</description>
+	</info>
+
+	<publications>
+		<artifact />
+		<artifact name="rmt-sources" type="source" ext="jar" />
+		<artifact name="rmt-javadoc" type="javadoc" ext="jar" />
+	</publications>
+
+	<dependencies>
+	    <dependency org="commons-lang" name="commons-lang" rev="latest.integration"/>
+		<dependency org="org.apache.poi" name="poi" rev="latest.integration">
+        	<exclude name="log4j"/>
+        </dependency>
+		<dependency org="org.apache.poi" name="poi-ooxml" rev="latest.integration">
+        	<exclude name="log4j"/>
+        	<exclude name="stax-api"/>
+        	<exclude name="xml-apis"/>
+        </dependency>
+        <dependency org="net.sourceforge.supercsv" name="supercsv" rev="latest.integration">
+        	<exclude name="spiffy"/>
+        </dependency>
+    </dependencies>
+</ivy-module>
