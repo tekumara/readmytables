@@ -25,6 +25,12 @@ public class CharacterReader implements
 	 * @return result
 	 */
 	public Character objectToCharacter(Object value) {
+		
+		if (value == null) {
+			throw new CellReaderException(
+					"Null object cannot be converted to Character.");
+		}
+
 		if (value instanceof Character) {
 			return (Character) value;
 		}

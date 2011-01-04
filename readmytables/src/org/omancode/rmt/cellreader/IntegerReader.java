@@ -110,18 +110,29 @@ public class IntegerReader implements CellReader<Integer> {
 	 * @return Integer
 	 */
 	public Integer objectToInteger(Object value) {
+
+		if (value == null) {
+			throw new CellReaderException(
+					"Null object cannot be converted to Integer.");
+		}
+
 		if (value instanceof Boolean) {
 			return ((Boolean) value).booleanValue() ? 1 : 0;
-		} else if (value instanceof Byte || value instanceof Short
+		}
+		if (value instanceof Byte || value instanceof Short
 				|| value instanceof Integer) {
 			return ((Number) value).intValue();
-		} else if (value instanceof Long) {
+		}
+		if (value instanceof Long) {
 			return longToInteger((Long) value);
-		} else if (value instanceof Float) {
+		}
+		if (value instanceof Float) {
 			return floatToInteger((Float) value);
-		} else if (value instanceof Double) {
+		}
+		if (value instanceof Double) {
 			return doubleToInteger((Double) value);
-		} else if (value instanceof String || value instanceof Character) {
+		}
+		if (value instanceof String || value instanceof Character) {
 			return stringToInteger(value.toString());
 		}
 

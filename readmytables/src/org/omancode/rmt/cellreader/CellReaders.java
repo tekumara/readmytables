@@ -59,7 +59,7 @@ public final class CellReaders {
 	 * it reads the empty string.
 	 */
 	public static final CellReader<Integer> OPTIONAL_INTEGER =
-			compose(new IntegerReader(), new TokenReader("",
+			compose(new IntegerReader(), new MissingValueReader(
 					MISSING_VALUE_INTEGER));
 
 	/**
@@ -67,7 +67,7 @@ public final class CellReaders {
 	 * reads the empty string.
 	 */
 	public static final CellReader<Double> OPTIONAL_DOUBLE =
-			compose(new DoubleReader(), new TokenReader("",
+			compose(new DoubleReader(), new MissingValueReader(
 					MISSING_VALUE_DOUBLE));
 
 	private static final Map<String, CellReader<?>> MAP_DEFAULT_READERS =

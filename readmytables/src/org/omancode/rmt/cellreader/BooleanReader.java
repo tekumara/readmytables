@@ -111,6 +111,11 @@ public class BooleanReader implements CellReader<Boolean> {
 	 */
 	public Boolean objectToBoolean(Object value) {
 
+		if (value == null) {
+			throw new CellReaderException(
+					"Null object cannot be converted to Boolean.");
+		}
+		
 		if (value instanceof Boolean) {
 			return ((Boolean) value).booleanValue();
 		}

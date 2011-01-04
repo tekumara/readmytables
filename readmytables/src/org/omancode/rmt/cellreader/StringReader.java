@@ -37,6 +37,11 @@ public class StringReader implements
 	 * @return result
 	 */
 	public String objectToString(Object value) {
+		if (value == null) {
+			throw new CellReaderException(
+					"Null object cannot be converted to String.");
+		}
+		
 		if (value instanceof Boolean || value instanceof Number
 				|| value instanceof Character || value instanceof String) {
 			return value.toString();

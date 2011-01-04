@@ -1,16 +1,14 @@
 package org.omancode.rmt.cellreader;
 
-
 /**
  * Reader that checks the read value and returns a different value if matches a
- * token. Matching is done using the Object equals method. Can be used to return
- * a different value for empty string, or any other value.
+ * token. Matching is done using the Object equals method. For example, a
+ * {@link TokenReader} can be used to return a different value for empty string.
  * 
  * @author Oliver Mannion
  * @version $Revision$
  */
-public class TokenReader implements
-		CellReader<Object> {
+public class TokenReader implements CellReader<Object> {
 
 	/**
 	 * 

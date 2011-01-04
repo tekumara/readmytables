@@ -23,6 +23,11 @@ public class DoubleReader implements CellReader<Double> {
 	 * @return result
 	 */
 	public Double objectToDouble(Object value) {
+		if (value == null) {
+			throw new CellReaderException(
+					"Null object cannot be converted to Double.");
+		}
+		
 		if (!(value instanceof Number || value instanceof String || value instanceof Character)) {
 			throw new CellReaderException("Object [" + value.toString()
 					+ "] of type " + value.getClass().toString()
