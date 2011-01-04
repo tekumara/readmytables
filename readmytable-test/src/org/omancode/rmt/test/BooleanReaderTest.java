@@ -164,4 +164,15 @@ public class BooleanReaderTest {
 			System.out.println(e.getMessage());
 		}
 	}
+	
+	/**
+	 * Launch the test.
+	 *
+	 * @param args the command line arguments
+	 *
+	 * @generatedBy CodePro at 22/12/10 2:41 PM
+	 */
+	public static void main(String[] args) {
+		new org.junit.runner.JUnitCore().run(BooleanReaderTest.class);
+	}
 }

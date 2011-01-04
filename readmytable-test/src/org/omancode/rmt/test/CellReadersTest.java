@@ -52,5 +52,16 @@ public class CellReadersTest {
 		assertEquals(CellReaders.MISSING_VALUE_INTEGER,
 				(int) CellReaders.OPTIONAL_INTEGER.call(null));
 	}
+	
+	/**
+	 * Launch the test.
+	 *
+	 * @param args the command line arguments
+	 *
+	 * @generatedBy CodePro at 22/12/10 2:41 PM
+	 */
+	public static void main(String[] args) {
+		new org.junit.runner.JUnitCore().run(CellReadersTest.class);
+	}
 
 }
