@@ -16,7 +16,7 @@ import org.omancode.rmt.tablereader.file.DelimitedFileReader;
 import org.omancode.rmt.tablereader.file.ExcelFileReader;
 import org.omancode.util.ArrayUtil;
 
-public class CellBasedFileTest {
+public class TableReaderFileTest {
 
 	public static final String TEST_DIR = "resources/";
 	
@@ -44,7 +44,7 @@ public class CellBasedFileTest {
 	private final AbstractTableReader csvSelection = new DelimitedFileReader(new File(TEST_DIR + "xls_people.csv"), columnsSelection, readersSelection, null);
 
 	
-	public CellBasedFileTest() throws IOException {
+	public TableReaderFileTest() throws IOException {
 
 	}
 
