@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0">
 
-	<info organisation="org.omancode" module="readmytables" revision="1.0" status="release">
+	<info organisation="org.omancode" module="${name}" revision="${version}" status="release">
 		<license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html" />
 		<description homepage="http://code.google.com/p/readmytables/">
+			ReadMyTables provides a common Java interface for accessing tabular data across different data sources eg: delimited files, Excel files etc.
 		</description>
 	</info>
 
+	<configurations>
+		<conf name="default" visibility="public" description="all artifacts of this module and its dependencies" extends="master,sources,javadoc"/>
+		<conf name="master" visibility="public" description="binary artifacts of this module and its dependencies"/>
+		<conf name="sources" visibility="public" description="source artifacts of this module and its dependencies"/>
+		<conf name="javadoc" visibility="public" description="javadoc artifacts of this module and its dependencies"/>
+	</configurations>
+
 	<publications>
-		<artifact />
-		<artifact name="readmytables-sources" type="source" ext="jar" />
-		<artifact name="readmytables-javadoc" type="javadoc" ext="jar" />
+		<artifact conf="master" />
+		<artifact name="${name}-sources" type="source" conf="sources" ext="jar" />
+		<artifact name="${name}-javadoc" type="javadoc" conf="javadoc" ext="jar" />
 	</publications>
 	
 	<dependencies>
-		<dependency org="org.omancode" name="util" rev="latest.integration"/>
+		<dependency org="org.omancode" name="omcutil" rev="latest.integration" conf="*->@"/>
     </dependencies>
 </ivy-module>
