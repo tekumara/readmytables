@@ -59,7 +59,16 @@
 	</target>
 
 	<target name="javadoc" description="Generate JavaDocs">
-		<javadoc sourcepath="${src.dir}" destdir="${doc.dir}" author="true" version="true" use="true" classpathref="build.classpath" />
+		<javadoc sourcepath="${src.dir}" 
+				destdir="${doc.dir}" 
+				author="true" 
+				version="true" 
+				use="true" 
+				classpathref="build.classpath">
+            <link href="http://java.sun.com/javase/6/docs/api/"/>
+        	<link href="http://readmytables.googlecode.com/svn/trunk/readmytables/doc"/>
+			<link href="http://supercsv.sourceforge.net/javadoc"/>
+        </javadoc>
 	</target>
 
 	<target name="package" depends="compile, javadoc" description="Generate JAR files">
