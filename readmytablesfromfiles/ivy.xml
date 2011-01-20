@@ -31,10 +31,9 @@
         	<exclude name="xml-apis"/>
         </dependency>
         <dependency org="net.sourceforge.supercsv" name="supercsv" rev="latest.integration">
-        	<exclude name="spiffy"/>
         </dependency>
         
-        <!-- exclude dependencies artifcats based on configuration -->
+        <!-- exclude dependencies artifacts based on configuration -->
 		<exclude type="source" ext="*" conf="master,javadoc"/>
 		<exclude type="javadoc" ext="*" conf="master,sources"/>
 		<exclude type="jar" ext="*" conf="sources,javadoc"/>
