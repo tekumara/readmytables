@@ -5,12 +5,51 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * Utility class providing default cell readers. Provides map from default cell
- * reader name to the cell reader, and vice versa.
+ * Utility class providing default cell readers.
+ * <p>
+ * Also provides methods for mapping from default cell reader name to the cell
+ * reader, and vice versa, as follows:
+ * <p>
+ * <table>
+ * <tr>
+ * <td>String name</td>
+ * <td>Default cell reader</td>
+ * </tr>
+ * <tr>
+ * <td>"boolean"</td>
+ * <td>{@link #BOOLEAN}</td>
+ * </tr>
+ * <tr>
+ * <td>"character"</td>
+ * <td>{@link #CHARACTER}</td>
+ * </tr>
+ * <tr>
+ * <td>"double"</td>
+ * <td>{@link #DOUBLE}</td>
+ * </tr>
+ * <tr>
+ * <td>"integer"</td>
+ * <td>{@link #INTEGER}</td>
+ * </tr>
+ * <tr>
+ * <td>"string"</td>
+ * <td>{@link #STRING}</td>
+ * </tr>
+ * <tr>
+ * <td>"optional integer"</td>
+ * <td>{@link #OPTIONAL_INTEGER}</td>
+ * </tr>
+ * <tr>
+ * <td>"optional double"</td>
+ * <td>{@link #OPTIONAL_DOUBLE}</td>
+ * </tr>
+ * </table>
+ * </p>
  * 
  * @author Oliver Mannion
  * @version $Revision$
  */
+
 public final class CellReaders {
 
 	/**
@@ -51,27 +90,24 @@ public final class CellReaders {
 	/**
 	 * Double missing value constant.
 	 */
-	public static final double MISSING_VALUE_DOUBLE =
-			Double.longBitsToDouble(0x7ff00000000007a2L);
+	public static final double MISSING_VALUE_DOUBLE = Double
+			.longBitsToDouble(0x7ff00000000007a2L);
 
 	/**
 	 * An integer cell reader that returns {@link #MISSING_VALUE_INTEGER} when
 	 * it reads the empty string.
 	 */
-	public static final CellReader<Integer> OPTIONAL_INTEGER =
-			compose(new IntegerReader(), new MissingValueReader(
-					MISSING_VALUE_INTEGER));
+	public static final CellReader<Integer> OPTIONAL_INTEGER = compose(
+			new IntegerReader(), new MissingValueReader(MISSING_VALUE_INTEGER));
 
 	/**
 	 * A double cell reader that returns {@link #MISSING_VALUE_DOUBLE} when it
 	 * reads the empty string.
 	 */
-	public static final CellReader<Double> OPTIONAL_DOUBLE =
-			compose(new DoubleReader(), new MissingValueReader(
-					MISSING_VALUE_DOUBLE));
+	public static final CellReader<Double> OPTIONAL_DOUBLE = compose(
+			new DoubleReader(), new MissingValueReader(MISSING_VALUE_DOUBLE));
 
-	private static final Map<String, CellReader<?>> MAP_DEFAULT_READERS =
-			new HashMap<String, CellReader<?>>();
+	private static final Map<String, CellReader<?>> MAP_DEFAULT_READERS = new HashMap<String, CellReader<?>>();
 
 	static {
 		MAP_DEFAULT_READERS.put("boolean", BOOLEAN);
@@ -127,9 +163,8 @@ public final class CellReaders {
 	 *         default cell reader
 	 */
 	public static CellReader<?> getDefaultReader(String name) {
-		CellReader<?> reader =
-				MAP_DEFAULT_READERS
-						.get(name.toLowerCase(Locale.getDefault()));
+		CellReader<?> reader = MAP_DEFAULT_READERS.get(name.toLowerCase(Locale
+				.getDefault()));
 
 		return reader;
 	}
@@ -155,8 +190,8 @@ public final class CellReaders {
 	}
 
 	/**
-	 * Composes one {@link CellReader} with another to return a new CellReader
-	 * according to <i>function composition</i>.
+	 * Composes one CellReader with another to return a new CellReader according
+	 * to <i>function composition</i>.
 	 * 
 	 * @param f
 	 *            the cell reader <code>f</code>.

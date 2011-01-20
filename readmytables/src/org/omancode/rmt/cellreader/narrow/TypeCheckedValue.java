@@ -25,11 +25,8 @@ public class TypeCheckedValue {
 	private final Object value;
 
 	/**
-	 * Convert missing ({@link TypeCheckedValue#isMissing()) int/double values
-	 * to {@link #MISSING_VALUE_INTEGER} or {@link #MISSING_VALUE_DOUBLE}.
-	 * 
-	 * @link TypeCheckedValue#MISSING_VALUE_INTEGER} or
-	 *       {@link TypeCheckedValue#MISSING_VALUE_DOUBLE}.
+	 * Use {@link CellReaders#OPTIONAL_DOUBLE} and
+	 * {@link CellReaders#OPTIONAL_INTEGER}?
 	 */
 	private boolean convertMissing = false;
 
