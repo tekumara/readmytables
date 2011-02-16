@@ -28,10 +28,10 @@
 
 	<target name="resolve" description="resolve dependencies">
 		<!-- do a retrieve to ivy.lib.dir -->
-		<ivy:retrieve conf="master" />
+		<ivy:retrieve conf="default" />
 
 		<!-- save report to doc.dir -->
-		<ivy:report conf="master" graph="false" todir="${ivyreport.dir}" />
+		<ivy:report conf="default" graph="false" todir="${ivyreport.dir}" />
 	</target>
 
 	<target name="clean-ivycache" description="clean the ivy cache">
