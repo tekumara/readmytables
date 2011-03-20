@@ -98,7 +98,8 @@ public final class CellReaders {
 	 * it reads the empty string.
 	 */
 	public static final CellReader<Integer> OPTIONAL_INTEGER = compose(
-			new IntegerReader(), new MissingValueReader(MISSING_VALUE_INTEGER));
+			new IntegerReader(),
+			new MissingValueReader(MISSING_VALUE_INTEGER));
 
 	/**
 	 * A double cell reader that returns {@link #MISSING_VALUE_DOUBLE} when it
@@ -107,7 +108,8 @@ public final class CellReaders {
 	public static final CellReader<Double> OPTIONAL_DOUBLE = compose(
 			new DoubleReader(), new MissingValueReader(MISSING_VALUE_DOUBLE));
 
-	private static final Map<String, CellReader<?>> MAP_DEFAULT_READERS = new HashMap<String, CellReader<?>>();
+	private static final Map<String, CellReader<?>> MAP_DEFAULT_READERS =
+			new HashMap<String, CellReader<?>>();
 
 	static {
 		MAP_DEFAULT_READERS.put("boolean", BOOLEAN);
@@ -163,8 +165,9 @@ public final class CellReaders {
 	 *         default cell reader
 	 */
 	public static CellReader<?> getDefaultReader(String name) {
-		CellReader<?> reader = MAP_DEFAULT_READERS.get(name.toLowerCase(Locale
-				.getDefault()));
+		CellReader<?> reader =
+				MAP_DEFAULT_READERS
+						.get(name.toLowerCase(Locale.getDefault()));
 
 		return reader;
 	}

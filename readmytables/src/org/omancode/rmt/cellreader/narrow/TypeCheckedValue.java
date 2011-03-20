@@ -14,6 +14,11 @@ public class TypeCheckedValue {
 	/**
 	 * Integer missing value constant.
 	 */
+	public static final byte MISSING_VALUE_BYTE = -128;
+	
+	/**
+	 * Integer missing value constant.
+	 */
 	public static final int MISSING_VALUE_INTEGER = -2147483648;
 
 	/**
