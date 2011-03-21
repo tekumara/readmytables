@@ -5,7 +5,7 @@
 	<settings defaultResolver="default" />
 	
 	<!-- make build.properites available for ivy.xml -->
-	<properties file="build.properties" />
+	<properties file="${ivy.basedir}/build.properties" />
 	
 	<resolvers>
 
