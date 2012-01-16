@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: readmytablesfromfiles
+Bundle-SymbolicName: org.omancode.readmytablesfromfiles
+Bundle-Version: 1.1.0.qualifier
+Export-Package: org.omancode.rmt.tablereader.file
+Import-Package: org.apache.commons.lang,
+ org.apache.poi.openxml4j.exceptions;version="3.8.0.beta4",
+ org.apache.poi.ss.usermodel;version="3.8.0.beta4",
+ org.apache.poi.ss.util;version="3.8.0.beta4",
+ org.omancode.rmt.cellreader,
+ org.omancode.rmt.tablereader,
+ org.supercsv.cellprocessor.ift;version="1.52.0",
+ org.supercsv.exception;version="1.52.0",
+ org.supercsv.io;version="1.52.0",
+ org.supercsv.prefs;version="1.52.0",
+ org.supercsv.util;version="1.52.0"
