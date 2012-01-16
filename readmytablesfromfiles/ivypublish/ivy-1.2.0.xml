@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+
+	<info organisation="org.omancode" module="readmytablesfromfiles" revision="1.2.0" status="release" publication="20120117113503">
+		<license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
+		<description homepage="http://code.google.com/p/readmytables/">
+		</description>
+	</info>
+
+	<configurations>
+		<conf name="default" visibility="public" description="binary artifacts of this module and its dependencies"/>
+		<conf name="sources" visibility="public" description="source artifacts of this module and its dependencies"/>
+		<conf name="javadoc" visibility="public" description="javadoc artifacts of this module and its dependencies"/>
+	</configurations>
+
+	<publications>
+		<artifact conf="default"/>
+		<artifact name="readmytablesfromfiles-sources" type="source" conf="sources" ext="jar"/>
+		<artifact name="readmytablesfromfiles-javadoc" type="javadoc" conf="javadoc" ext="jar"/>
+	</publications>
+
+	<dependencies>
+		<dependency org="org.omancode" name="readmytables" rev="1.2.0" revConstraint="latest.integration" conf="*->@"/>
+	    <dependency org="commons-lang" name="commons-lang" rev="2.6" revConstraint="latest.integration" conf="*->@"/>
+		<dependency org="org.apache.poi" name="poi" rev="3.8-beta5" revConstraint="latest.integration">
+        	<exclude name="log4j"/>
+        </dependency>
+		<dependency org="org.apache.poi" name="poi-ooxml" rev="3.8-beta5" revConstraint="latest.integration">
+        	<exclude name="log4j"/>
+        	<exclude name="stax-api"/>
+        	<exclude name="xml-apis"/>
+        </dependency>
+        <dependency org="net.sourceforge.supercsv" name="supercsv" rev="1.52" revConstraint="latest.integration"/>
+        
+        <!-- exclude dependencies artifacts based on configuration -->
+		<exclude type="source" ext="*" conf="default,javadoc"/>
+		<exclude type="javadoc" ext="*" conf="default,sources"/>
+		<exclude type="jar" ext="*" conf="sources,javadoc"/>
+        
+    </dependencies>
+</ivy-module>

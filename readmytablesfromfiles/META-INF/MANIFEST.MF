@@ -1,17 +1,16 @@
 Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.2
+Created-By: 1.6.0_25-b06 (Sun Microsystems Inc.)
 Bundle-ManifestVersion: 2
 Bundle-Name: readmytablesfromfiles
 Bundle-SymbolicName: org.omancode.readmytablesfromfiles
-Bundle-Version: 1.1.0.qualifier
+Bundle-Version: 1.2.0
 Export-Package: org.omancode.rmt.tablereader.file
-Import-Package: org.apache.commons.lang,
- org.apache.poi.openxml4j.exceptions;version="3.8.0.beta4",
- org.apache.poi.ss.usermodel;version="3.8.0.beta4",
- org.apache.poi.ss.util;version="3.8.0.beta4",
- org.omancode.rmt.cellreader,
- org.omancode.rmt.tablereader,
- org.supercsv.cellprocessor.ift;version="1.52.0",
- org.supercsv.exception;version="1.52.0",
- org.supercsv.io;version="1.52.0",
- org.supercsv.prefs;version="1.52.0",
- org.supercsv.util;version="1.52.0"
+Import-Package: org.apache.commons.lang,org.apache.poi.openxml4j.excep
+ tions;version="3.8.0.beta4",org.apache.poi.ss.usermodel;version="3.8.
+ 0.beta4",org.apache.poi.ss.util;version="3.8.0.beta4",org.omancode.rm
+ t.cellreader,org.omancode.rmt.tablereader,org.supercsv.cellprocessor.
+ ift;version="1.52.0",org.supercsv.exception;version="1.52.0",org.supe
+ rcsv.io;version="1.52.0",org.supercsv.prefs;version="1.52.0",org.supe
+ rcsv.util;version="1.52.0"
+
