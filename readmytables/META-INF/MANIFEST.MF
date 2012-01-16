@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: readmytables
+Bundle-SymbolicName: org.omancode.readmytables
+Bundle-Version: 1.1.0.qualifier
+Import-Package: org.omancode.util
+Export-Package: org.omancode.rmt.cellreader,
+ org.omancode.rmt.cellreader.narrow,
+ org.omancode.rmt.tablereader
