@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0">
 
-	<info organisation="org.omancode" module="readmytables" revision="1.1" status="release" publication="20110321115138">
+	<info organisation="org.omancode" module="readmytables" revision="1.2.0" status="release" publication="20120117112752">
 		<license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
 		<description homepage="http://code.google.com/p/readmytables/">
 			ReadMyTables provides a common Java interface for accessing tabular data across different data sources eg: delimited files, Excel files etc.
@@ -21,6 +21,6 @@
 	</publications>
 	
 	<dependencies>
-		<dependency org="org.omancode" name="omcutil" rev="1.2.1" revConstraint="latest.integration" conf="*->@"/>
+		<dependency org="org.omancode" name="omcutil" rev="1.2.5" revConstraint="latest.integration" conf="*->@"/>
     </dependencies>
 </ivy-module>
