@@ -9,6 +9,8 @@
 	
 	<resolvers>
 
+		<ibiblio name="omcutil-repo" root="http://omcutil.googlecode.com/git/repo/" m2compatible="true" />
+		
 		<!-- the ivyroundup packager repo -->
 		<packager name="ivyroundup" buildRoot="${user.home}/.ivy2/packager/build"
 			resourceCache="${user.home}/.ivy2/packager/cache"
@@ -29,6 +31,7 @@
 	<modules>
 		<!--  define resolvers for specific modules -->
 		<module organisation="net.sourceforge.supercsv" resolver="ivyroundup" />
+		<module organisation="org.omancode" name="omcutil" resolver="omcutil-repo" />
 	</modules>
 	
 </ivysettings>
