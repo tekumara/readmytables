@@ -28,12 +28,6 @@
     </dependency>
     <dependency>
       <groupId>org.apache.poi</groupId>
-      <artifactId>poi</artifactId>
-      <version>latest.integration</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.poi</groupId>
       <artifactId>poi-ooxml</artifactId>
       <version>latest.integration</version>
       <scope>compile</scope>
